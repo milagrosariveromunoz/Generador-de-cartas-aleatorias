@@ -1,1 +1,52 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+  box-sizing: border-box;
+}
+.card {
+  margin: auto;
+  background-color: white;
+  width: 250px;
+  height: 200px;
+  padding: 20px;
+  padding-top: 170px;
+  border: 2px solid black;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  font-size: 80px;
+}
+
+.card::after {
+  color: red;
+  bottom: 15px;
+  right: 15px;
+  font-size: 80px;
+  position: absolute;
+  transform: rotate(180deg);
+}
+
+.card::before {
+  color: red;
+  top: 15px;
+  left: 15px;
+  font-size: 80px;
+  position: absolute;
+}
+.spade::before,
+.spade::after {
+  content: "♠";
+}
+.clover::before,
+.clover::after {
+  content: "♣";
+}
+.diamond::before,
+.diamond::before::after {
+  content: "♦";
+  color: red;
+}
+.heart::before:before,
+.heart::after {
+  content: "♥";
+  color: red;
+}
